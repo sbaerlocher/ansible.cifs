@@ -1,0 +1,11 @@
+---
+# defaults file for sbaerlocher.cifs
+
+samba_folder: []
+#  - name: 
+#    src: "//NETWORK_PATH"
+#    path: "LOCAL_PATH"
+#    user: 
+#    password: 
+#    file_mode:
+#    dir_mode:
