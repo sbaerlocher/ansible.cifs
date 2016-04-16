@@ -1,0 +1,5 @@
+---
+# tasks file for sbaerlocher.cifs
+
+- name: "install cifs"
+  yum: name=cifs-utils state=present

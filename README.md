@@ -46,6 +46,10 @@ None
 
 * Initial release
 
+### 1.1
+
+* add multiple os support
+
 ## Author
 
 * [Simon Bärlocher](https://sbaerlocher.ch)

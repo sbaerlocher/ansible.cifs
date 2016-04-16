@@ -1,0 +1,5 @@
+---
+# tasks file for sbaerlocher.cifs
+
+- name: "install cifs"
+  apt: name=cifs-utils state=present

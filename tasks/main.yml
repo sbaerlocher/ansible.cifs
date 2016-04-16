@@ -1,13 +1,13 @@
 ---
 # tasks file for sbaerlocher.cifs
 
-- name: "install cifs on RedHat"
-  yum: name=cifs-utils state=present
-  when: ansible_os_family == 'RedHat'
-
-- name: "install cifs on Debian"
-  apt: name=cifs-utils state=present
-  when: ansible_os_family == 'Debian'
+- name: "add OS specific task"
+  include: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution }}-{{ ansible_distribution_version }}.yml"
+    - "{{ ansible_distribution }}.yml"
+    - "{{ ansible_os_family }}.yml"
+    - "defaults.yml"
 
 - name: "mount {{ item.name }} folder"
   mount: 
